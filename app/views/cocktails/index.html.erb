@@ -1,5 +1,8 @@
 <div class="main-page-header">
-<img src="https://i0.wp.com/www.oliviamaefurnishings.com/wp-content/uploads/2018/09/Pick-Your-Poison-PRODUCT-GALLERY.jpg?fit=2400%2C3000&ssl=1" id="headerimg">
+<img src="https://infatuation.imgix.net/media/images/features/rules-for-making-better-cocktails/banners/1586470902.65.jpg?" id="headerimg">
+<p class="header-words" id="header-words1">DRANKS</p>
+<p class="header-words" id="header-words2">DRANKS</p>
+<p class="header-words" id="header-words3">DRANKS</p>
 </div>
 
 <div class="container all-drinks">
@@ -7,14 +10,17 @@
 <div class="row">
   <% @cocktails.each do |cocktail| %>
   <div class="col-3">
-    <div class="cocktail-card" 
+
+  <%= link_to cocktail  do %>
+    <div class="cocktail-card d-flex align-items-center justify-content-center" 
     <% if cocktail.imgurl.present? %>
- style="background-image: url('<%=cocktail.imgurl%>')" alt="no image"
-<% end %>
+    style="background-image: url('<%=cocktail.imgurl%>')" alt="no image"
+    <% end %>
     >
       <h3> <%= cocktail.name %> </h3>
-      <p> <%= link_to 'Show', cocktail %> </p>
+      <p>  </p>
     </div>
+    <% end %>
   </div>
   <% end %>
 </div>
