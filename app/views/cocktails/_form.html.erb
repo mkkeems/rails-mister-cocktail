@@ -1,5 +1,6 @@
 <div class="cocktail-form">
 <%= simple_form_for(@cocktail)do |f| %>
+  <h1>What's your poison?</h1>
   <%= f.input :name %>
   <%= f.input :imgurl, label:"Add image url", hint: "please add jpeg/png" %>
   <%= f.submit "Add Drink", class: "btn btn-primary" %>
