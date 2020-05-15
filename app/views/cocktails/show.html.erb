@@ -1,7 +1,9 @@
 
 <div class="text-center border border-light p-5 single-content">
 <h1><%=@cocktail.name%></h1>
-
+<% if @cocktail.imgurl.present? %>
+  <img src= <%=@cocktail.imgurl%> alt="no image" class="drinkimg">
+<% end %>
 <ul class="list-group ingredients-list">
   <% @cocktail.doses.each do |dose| %>
     <li class="list-group-item">
@@ -15,8 +17,9 @@
   <% end %>
 </ul>
 <br>
+<%= link_to("Edit Cocktail", edit_cocktail_path) %>
+<br>
 <%= link_to 'Add an ingredient', new_cocktail_dose_path(@cocktail) %>
 <br>
 <%= link_to 'Delete Drink', cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
-
 <div>

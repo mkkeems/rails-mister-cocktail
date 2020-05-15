@@ -1,9 +1,17 @@
-<h1>Cocktails</h1>
+<div class="container">
 
-<% @cocktails.each do |cocktail| %>
-<div class="cocktail-card">
-  <h3> <%= cocktail.name %> </h3>
-  <h4> <%= link_to 'Show', cocktail %> </h4>
+<h1 class="text-center">Cocktails</h1>
+
+
+<div class="row">
+  <% @cocktails.each do |cocktail| %>
+  <div class="col-3">
+    <div class="cocktail-card">
+      <h3> <%= cocktail.name %> </h3>
+      <p> <%= link_to 'Show', cocktail %> </p>
+    </div>
+  </div>
+  <% end %>
 </div>
-<% end %>
 
+</div>
